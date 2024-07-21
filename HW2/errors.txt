@@ -1,0 +1,30 @@
+WHEN YOU FORGET TO ADD A SEMICOLON AFTER A LINE
+
+ In function ‘int main()’:
+hamlet.cpp:6:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^
+
+WHEN YOU FORGET TO ADD NAMESPACE DECLARATION
+
+hamlet.cpp: In function ‘int main()’:
+hamlet.cpp:5:3: error: ‘cout’ was not declared in this scope
+   cout <<"To be, or not to be, that is the question.\n";
+   ^
+hamlet.cpp:5:3: note: suggested alternative:
+In file included from hamlet.cpp:1:0:
+/usr/include/c++/4.8.2/iostream:61:18: note:   ‘std::cout’
+   extern ostream cout;  /// Linked to standard output
+                  ^
+hamlet.cpp:6:11: error: expected ‘;’ before ‘:’ token
+   return 0:
+           ^
+hamlet.cpp:6:11: error: expected primary-expression before ‘:’ token
+hamlet.cpp:6:11: error: expected ‘;’ before ‘:’ token
+
+WHEN YOU FORGET TO WRITE "int" BEFORE DEFINING AN INTEGER (such as 'a')
+variables.cpp:5:1: error: ‘a’ was not declared in this scope
+ a = 5; // an integer
+ ^
+
+

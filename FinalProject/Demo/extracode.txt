@@ -1,0 +1,27 @@
+  Runge Khutta loop
+    
+    k1 = dXi*dmdxi_function (Xi_array[i-1], density_array[i-1], alpha);
+    k2 = dXi*dmdxi_function (Xi_array[i-1]+(0.5*dXi), density_array[i-1], alpha);
+    k3 = dXi*dmdxi_function (Xi_array[i-1]+(0.5*dXi), density_array[i-1], alpha);
+    k4 = dXi*dmdxi_function (Xi_array[i-1]+dXi, density_array[i-1], alpha);
+    m_enclosed_array[i] = m_enclosed_array[i-1] + ((k1+2*k2+2*k3+k4)/6);
+    cout << k1 << " " << k2 << " " << k3 << " " << k4 << " " << ((k1+2*k2+2*k3+k4)/6) << endl;
+
+euler
+
+  m_enclosed_array[i] = m_enclosed_array[i-1] + dXi*dmdxi_function (Xi_array[i], density_array[i], alpha);
+
+  density_array[i] = density_function (theta_array[i],n);
+
+
+
+    m_enclosed_array[i] = m_enclosed_array[i-1] + 4*M_PI*pow(Xi_array[i],2)*dXi*density_array[i];
+
+ double alpha = sqrt((n+1)*pow(central_density,((1/n)-1))/(4*M_PI*G));
+
+ 
+  float k1, k2, k3, k4;
+  m_enclosed_array[0] = 0;
+  k1=0; k2=0; k3=0; k4=0;
+
+  float alpha = sqrt((n+1)*pow(central_density,(1/n - 1.))/(4.*M_PI*G));

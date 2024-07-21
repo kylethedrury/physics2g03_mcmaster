@@ -1,0 +1,4 @@
+ls
+documents/
+ls.txt
+test/
